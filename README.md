@@ -1,24 +1,31 @@
 Note:
 1. Copy from https://github.com/NomicFoundation/hardhat-boilerplate
 2. Modify package.json: hardhat 2.11.0->2.11.1
-
-3. Installation
+ 
+3. Set proxy if needed
+``` 
+// set proxy
+const { ProxyAgent, setGlobalDispatcher } = require("undici");
+const proxyAgent = new ProxyAgent('http://127.0.0.1:7890'); // change to yours
+setGlobalDispatcher(proxyAgent);
+```
+4. Installation
 ```
 git clone https://github.com/github167/demo-hardhat.git
 cd demo-hardhat
 npm install
 ```
-4. Start teminal1
+5. Start teminal1
 ```'
 npx hardhat node
 ```
 
-5. Deploy contract
+6. Deploy contract
 ```
 npx hardhat --network localhost run scripts/deploy.js
 ```
 
-6. Metamask
+7. Metamask
 a. launch metamask: localhost:8454
 b. transfer eth and token to the Account 1
 ```
