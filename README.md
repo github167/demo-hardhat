@@ -2,7 +2,7 @@ Note:
 1. Copy from https://github.com/NomicFoundation/hardhat-boilerplate
 2. Modify package.json: hardhat 2.11.0->2.11.1
  
-3. Set proxy if needed
+3. Set proxy if needed (hardhat.config.js)
 ``` 
 // set proxy
 const { ProxyAgent, setGlobalDispatcher } = require("undici");
